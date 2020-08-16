@@ -83,7 +83,7 @@
                   
                   <a href="/cargo-status/{{ $cargo->id }}" >
                     <button type="button" rel="tooltip" class="btn btn-warning">
-                      <i class="now-ui-icons ui-2_settings-90"> Status</i>
+                      <i class="now-ui-icons ui-2_settings-90"> <strong>{{$cargo->status}}</strong></i>
                   </button>
                 </a>
                 </td>

@@ -27,12 +27,9 @@ Route::resource('jobposition', 'EmployeeratesController');
 Route::get('/jobdescription-edit/{id}', 'EmployeeratesController@editJobdescription');
 
 Route::resource('cargo', 'CargoController');
-Route::get('/cargo-edit/{id}', 'EmployeeratesController@editcargo');
 Route::get('/cargo-status/{id}', 'CargoController@status');
-
-
 route::get('/cargo-transaction', 'CargoController@addtransaction');
-Route::post('cargo-transaction/fetch', 'CargoController@fetch')->name('dynamicdependent.fetch');
+
 
 
 Route::resource('cargorates', 'CargoRatesController');
@@ -40,3 +37,4 @@ Route::get('/cargorates-edit/{id}', 'CargoRatesController@editCargoRates');
 
 
 Route::resource('payroll', 'PayrollController');
+

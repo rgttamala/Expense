@@ -16,4 +16,10 @@ class Employee extends Model
         return $this->hasMany('App\Cargo');
     }
 
+    public function getFullNameAttribute()
+    {
+       return ucfirst($this->FirstName) . ' ' . ucfirst($this->MiddleName) . ' ' . ucfirst($this->LastName);
+    }
+
+
 }

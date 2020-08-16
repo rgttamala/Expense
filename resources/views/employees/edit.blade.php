@@ -52,7 +52,7 @@
             <div class="form-group col-md-4">
               <label for="inputState">Gender</label>
               <select id="inputState" class="form-control" name="gender" value="{{ $employees->Gender }}" required>
-                <option selected>Male</option>
+                <option>Male</option>
                 <option>Female</option>
               </select>
             </div>

@@ -16,4 +16,9 @@ class CargoRates extends Model
         return $this->belongsTo('App\Cargo', 'cargorate_id', 'id');
     }
 
+    public function getFullNameAttribute()
+    {
+       return ucfirst($this->origin) . '→' . ucfirst($this->destination) . ' | ' . ucfirst($this->route) . ' | ' . ucfirst($this->trucktype) . ' | ' . ucfirst($this->cargoname) . ' || PHP ' . ucfirst($this->rate);
+    }
+    
 }

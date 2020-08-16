@@ -45,12 +45,23 @@ class CargoController extends Controller
     }
 
     public function status(Request $request, $id){
-    {
-     
-       return view('cargos.status');
+
+
+        $cargos = Cargo::findOrFail($id);
+        $helpers = Employee::all()->pluck('full_name', 'id');
+        $drivers = Employee::all()->pluck('full_name', 'id');
+        $cargorates = CargoRates::all()->pluck('full_name','id');
+
+        return view('cargos.status')
+        ->with('cargos', $cargos)
+        ->with('cargorates', $cargorates)
+        ->with('drivers', $drivers)
+        ->with('helpers', $drivers);
+       
+
     }
 
-}
+    
 
     /**
      * Show the form for creating a new resource.
@@ -159,9 +170,10 @@ class CargoController extends Controller
      * @param  \App\Cargo  $cargo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cargo $cargo)
+    public function update(Request $request, $id)
     {
-        //
+        
+        return 'hi';
     }
 
     /**

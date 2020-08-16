@@ -80,7 +80,7 @@
                                   </tr>
 
                                   <tr>
-                                    <td>Job Position</td>
+                                    <td>Contact Number</td>
                                     <td>{{ $employee->ContactNumber }}</td>
                                   </tr>
 
