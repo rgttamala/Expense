@@ -19,6 +19,7 @@ class EmployeeController extends Controller
     {
     
         $insurance = 0.02;
+
         $employees = DB::table('employees')
         ->join('employeerates', 'employees.JobRates_id', '=', 'employeerates.id')
         ->select('employees.*','employeerates.*')->get();     
@@ -28,7 +29,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a neew resource.
      *
      * @return \Illuminate\Http\Response
      */

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHelpersTable extends Migration
+class CreateDriversTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateHelpersTable extends Migration
      */
     public function up()
     {
-        Schema::create('helpers', function (Blueprint $table) {
+        Schema::create('drivers', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->integer('sss');
+            $table->integer('philhealth');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateHelpersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('helpers');
+        Schema::dropIfExists('drivers');
     }
 }

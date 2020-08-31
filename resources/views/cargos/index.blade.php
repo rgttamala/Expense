@@ -81,16 +81,19 @@
               
                 <td class="td-actions text-right">
                   
-                  <a href="/cargo-status/{{ $cargo->id }}" >
-                    <button type="button" rel="tooltip" class="btn btn-warning">
-                      <i class="now-ui-icons ui-2_settings-90"> <strong>{{$cargo->status}}</strong></i>
-                  </button>
-                </a>
+                
+                    <a href="/cargo-edit/{{ $cargo->id }}" >
+                    <button type="button" rel="tooltip" class="btn btn-success">
+                        <i class="now-ui-icons ui-2_settings-90"> Edit</i>
+                    </button>
+                    </a>
+
+                
+
                 </td>
             </tr>
           
             @endforeach
-        
           </tbody>
         </table>
       </div>

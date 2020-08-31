@@ -44,9 +44,8 @@ class CargoController extends Controller
         ->with('helpers', $helpers);
     }
 
-    public function status(Request $request, $id){
-
-
+    public function editCargo(Request $request, $id)
+    {
         $cargos = Cargo::findOrFail($id);
         $helpers = Employee::all()->pluck('full_name', 'id');
         $drivers = Employee::all()->pluck('full_name', 'id');
@@ -57,7 +56,6 @@ class CargoController extends Controller
         ->with('cargorates', $cargorates)
         ->with('drivers', $drivers)
         ->with('helpers', $drivers);
-       
 
     }
 

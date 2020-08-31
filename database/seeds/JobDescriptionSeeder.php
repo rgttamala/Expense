@@ -13,16 +13,16 @@ class JobDescriptionSeeder extends Seeder
     {
         DB::table('employeerates')->insert(array(
             array(
-                'JobDescription' => "Driver",
-                'Rate' => "300",
+                'JobDescription' => "Secretary",
+                'Rate' => "25000",
                 'Frequency' => "Monthly",
                 'sss' => "450",
                 'pagibig' => "500",
                 
             ),
             array(
-                'JobDescription' => "Helper",
-                'Rate' => "300",
+                'JobDescription' => "Dispatcher",
+                'Rate' => "20000",
                 'Frequency' => "Monthly",
                 'sss' => "450",
                 'pagibig' => "500",

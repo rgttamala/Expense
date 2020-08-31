@@ -27,14 +27,17 @@ Route::resource('jobposition', 'EmployeeratesController');
 Route::get('/jobdescription-edit/{id}', 'EmployeeratesController@editJobdescription');
 
 Route::resource('cargo', 'CargoController');
-Route::get('/cargo-status/{id}', 'CargoController@status');
-route::get('/cargo-transaction', 'CargoController@addtransaction');
+Route::get('/cargo-edit/{id}', 'CargoController@editCargo');
 
-
-
+Route::get('/cargo-transaction', 'CargoController@addtransaction');
 Route::resource('cargorates', 'CargoRatesController');
 Route::get('/cargorates-edit/{id}', 'CargoRatesController@editCargoRates');
 
+//helper
+Route::resource('helper', 'HelperController');
+
+//Driver
+Route::resource('driver', 'DriverController');
 
 Route::resource('payroll', 'PayrollController');
 

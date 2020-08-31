@@ -50,6 +50,18 @@
             </a>
           </li>
           <li>
+            <a href="{{route('driver.index')}}">
+                <i class="now-ui-icons transportation_bus-front-12"></i>
+                <p>Driver</p>
+              </a>
+            </li>
+            <li>
+              <a href="{{route('helper.index')}}">
+                  <i class="now-ui-icons sport_user-run"></i>
+                  <p>Helper</p>
+                </a>
+              </li>
+          <li>
           <a href="{{ route('cargo.index') }}">
               <i class="now-ui-icons shopping_delivery-fast"></i>
               <p>Cargo</p>
